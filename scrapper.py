@@ -110,7 +110,11 @@ def get_data(url):
 	#fff.close()
 
 	r = json.loads(rescut2[0])
-	r2 = json.loads(rescut3[1])
+
+	if(len(rescut3) <= 1):
+		r2 = json.loads(rescut3[0])
+	else:
+		r2 = json.loads(rescut3[1])
 
 	return [r,r2]
 
